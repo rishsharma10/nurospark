@@ -71,9 +71,9 @@ const HeaderPage = () => {
                         <Link className="nav-item"  href="/" legacyBehavior>
                             <a className="nav-link" aria-current="page">Home</a>
                         </Link>
-                        <Link className="nav-item"  href="/products/search/all/1" legacyBehavior>
+                        {/* <Link className="nav-item"  href="/products/search/all/1" legacyBehavior>
                             <a className="nav-link">Shop</a>
-                        </Link>
+                        </Link> */}
                         <Link className="nav-item"  href="/about" legacyBehavior>
                             <a className="nav-link">About us</a>
                         </Link>
