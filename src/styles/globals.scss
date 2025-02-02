@@ -1,0 +1,1015 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "override";
+@import "theme";
+@import "typography";
+@import "nprogress/nprogress.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'karlieserifCondensed';
+  src: url('../assets/karlieserif-condensed-maisfontes.0df4/karlieserif-condensed.otf');
+}
+
+html,
+body,
+#__next,
+.ant-layout {
+  height: 100%;
+  // background-color: #f4f4f4;
+  font-family: "Nunito", serif !important;
+}
+
+* {
+  font-family: "Nunito", serif !important;
+}
+
+.ant-layout-sider {
+  height: 100%;
+  overflow: auto;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
+
+#nprogress .bar {
+  background: $primary !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-black;
+  width: 6px;
+  border-radius: 40px;
+}
+
+// ------------------------------- New CSS ----------------------------------
+section {
+  padding-block: 80px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $black;
+  font-family: "Raleway", serif !important;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.logo-text {
+  font-family: 'karlieserifCondensed' !important;
+  text-transform: uppercase;
+  margin: 0;
+  color: $black;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 46px;
+}
+
+.title-seperator {
+  margin-block: 12px 20px;
+}
+
+.sub-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+a {
+  color: $black;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.common-bg {
+  background: url('../assets/brand-guide/42.png') no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.common-bg-2 {
+  background: url('../assets/brand-guide/grey-bg.jpg') center/cover no-repeat;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+
+
+  .ant-carousel .slick-list .slick-slide>div>div,
+  .ant-carousel,
+  .slick-slider,
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+
+  .ant-carousel .slick-list .slick-slide>div>div {
+    height: 100% !important;
+  }
+
+  .ant-carousel .slick-list .slick-slide>div {
+    height: 100%;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+
+    h1 {
+      font-size: 42px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width:575px) {
+    height: 74vh;
+
+    .hero-content {
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// ---------------------- Blog Section --------------------
+.blog-section {
+  .blog-card {
+    .blog-image {
+      height: 240px;
+      border-radius: 8px;
+      min-height: 240px;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.fixed-banner-section {
+  background: linear-gradient(#000000ae, #000000ae), url('../assets/images/espresso-pouring-from-coffee-machine-cafe.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  height: 80vh;
+}
+
+.stats-card {
+  h1 {
+    font-size: 50px;
+    color: #be9c79;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  p {
+    color: $secondary;
+    font-size: 16px;
+  }
+}
+
+
+.cart-card {
+  .cart-image {
+    height: 260px;
+    min-height: 260px;
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .cart-overlay {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.29);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      height: 100%;
+      transition: 0.5s;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    &:hover {
+      .cart-overlay {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.gallery-card {
+  position: relative;
+
+  .gallery-image {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .gallery-content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #000000b5;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+
+    h4 {
+      font-size: 32px;
+      color: $white;
+    }
+
+    p {
+      font-size: 16px;
+      color: $white;
+    }
+  }
+
+  &:hover {
+    .gallery-content {
+      opacity: 1;
+    }
+  }
+}
+
+.contact-text button {
+  padding: 14px 36px;
+}
+
+.footer-section {
+  // background: linear-gradient(#000000c0, #000000c0), url('../assets/images/cappuccino-sits-elegantly-atop-pile-rich-coffee-beans.jpg') center/cover no-repeat;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .about-content {
+    * {
+      color: $white;
+    }
+
+    li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: 0.3s;
+
+      &:hover {
+        .line {
+          width: 14px;
+        }
+      }
+    }
+
+    a {
+      font-size: 14px;
+    }
+
+    .line {
+      transition: 0.3s;
+      width: 0;
+      height: 1px;
+      background-color: $white;
+    }
+
+    ::placeholder {
+      color: $white;
+    }
+  }
+}
+
+.footer {
+  background-color: $light-black;
+  padding-block: 40px 30px;
+
+  * {
+    color: $white;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Marcellus", serif;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.navbar {
+  background-color: $white;
+
+  .nav-link {
+    color: $black ;
+    font-size: 16px;
+    font-family: "Marcellus", serif;
+    letter-spacing: 1px;
+    padding-inline: 0 !important;
+    margin-right: 8px;
+    position: relative;
+    white-space: nowrap;
+
+    &::before {
+      content: '';
+      transition: 0.3s;
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background-color: $black;
+    }
+  }
+
+  .nav-link.active {
+    color: $black;
+
+    &::before {
+      width: 60%;
+    }
+  }
+
+  .nav-link:hover {
+    &::before {
+      width: 60%;
+    }
+  }
+}
+
+.bg-dark {
+  background-color: $black !important;
+}
+
+
+// --------------------------------- Cart Section ------------------------------
+.cart-banner {
+  height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.618);
+    position: absolute;
+    inset: 0;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: 60px;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+  }
+}
+
+.auth-page {
+  background: url('../assets/brand-guide/hero-image.png') no-repeat;
+  background-position: left;
+  background-size: cover;
+  background-color: $white;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cart-total {
+  .cart-list {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    padding-block: 20px;
+
+    span:first-child {
+      font-weight: 600;
+      width: 25%;
+    }
+
+  }
+}
+
+.quantity-counter {
+  .counter-div {
+    height: 70px;
+    min-height: 70px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid $border-color;
+    border-right: none;
+  }
+
+  button {
+    height: 35px;
+    width: 35px;
+    border: 1px solid $border-color;
+  }
+}
+
+.preview-image {
+  // background-color: $white;
+  height: 700px;
+}
+
+.preview-image-list {
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  padding-bottom: 6px;
+  gap: 12px;
+
+  .list-image {
+    height: 160px;
+    cursor: pointer;
+    // width: 100px;
+    background-color: $border-color;
+  }
+}
+
+button {
+  // text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-desc-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-banner {
+  height: 240px;
+  min-height: 240px;
+}
+
+.about-banner {
+  height: 400px;
+  min-height: 400px;
+}
+
+.story-section {
+  height: 300px;
+  border-radius: 8px;
+
+  img {
+    border-radius: 8px;
+  }
+}
+
+.about-testimonial-card {
+  * {
+    color: $white;
+    text-align: center;
+  }
+
+  .name {
+    font-family: "Marcellus", serif;
+  }
+}
+
+.ant-carousel .slick-dots li {
+  height: 12px !important;
+  width: 12px !important;
+  border-radius: 50% !important;
+  margin-inline: 6px !important;
+
+  button {
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 50% !important;
+    border: 1px solid $primary !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }
+}
+
+.ant-carousel .slick-dots li.slick-active {
+  button {
+    background-color: $primary !important;
+  }
+}
+
+
+@media (max-width:575px) {
+  section {
+    padding-block: 50px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .sub-title {
+    font-size: 16px;
+  }
+
+  .fixed-banner-section {
+    height: 60vh;
+  }
+
+  .cart-banner {
+    height: 300px;
+
+    h2 {
+      font-size: 38px;
+    }
+  }
+
+  .about-banner {
+    height: 260px;
+    min-height: 260px;
+    border-radius: 8px;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  .preview-image {
+    height: 400px;
+  }
+}
+
+.full-width-image {
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.our-story-col-1 {
+  height: 450px;
+  border-radius: 12px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.54);
+    border-radius: 12px;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    z-index: 1;
+    margin: auto;
+  }
+
+  img {
+    border-radius: 12px;
+    position: absolute;
+    inset: 0;
+  }
+
+  .out-story-content-1 {
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    * {
+      color: $white;
+    }
+  }
+}
+
+.out-story-content {
+  margin-top: 10px;
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+.our-story-image {
+  border-radius: 12px;
+
+  img {
+    border-radius: 12px;
+  }
+}
+
+.cta-section {
+  background: linear-gradient(#000000b6, #000000b6), url('../assets/images/assortment-crispy-tartlet-with-filling.jpg') center/cover;
+  border-radius: 30px;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  * {
+    color: $white;
+  }
+
+  @media (max-width:575px) {
+    border-radius: 0;
+  }
+}
+
+.cart-img {
+  margin: auto;
+  height: 100px !important;
+  width: 100px !important;
+
+  img {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+
+.courses-tab {
+  button.active {
+    color: $primary !important;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 90%;
+      height: 2px;
+      background-color: $primary;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  button:hover {
+    color: $primary !important;
+  }
+}
+
+.course-card {
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .course-image {
+    height: 220px;
+    min-height: 220px;
+    border-radius: 12px 12px 0 0;
+
+    img {
+      border-radius: 12px 12px 0 0;
+    }
+  }
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
+  }
+}
+
+.feature-card {
+  background-color: $primary-light;
+  padding: 40px;
+  border-radius: 30px;
+  position: relative;
+  height: 100%;
+  border-bottom: 5px solid $primary;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .feature-icon {
+    height: 80px;
+    width: 80px;
+    background-color: $primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-20px);
+
+    .feature-icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.our-teacher-card {
+  cursor: pointer;
+  transition: 0.3s;
+
+  .teacher-image {
+    height: 200px;
+    min-height: 200px;
+
+    .teacher-details {
+      height: 100%;
+      width: 100%;
+      background-color: #01abb794;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+      margin: auto;
+      opacity: 0;
+      transition: 0.3s;
+    }
+  }
+
+  &:hover {
+    .teacher-details {
+      opacity: 1;
+    }
+  }
+}
+
+.blog-card {
+  .blog-image {
+    height: 220px;
+    border-radius: 8px;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+}
+
+.testimonial-section {
+  background-color: $primary-light;
+
+  .ant-carousel {
+    .slick-list {
+      overflow-y: unset !important;
+      padding-top: 90px;
+      padding-bottom: 40px;
+      overflow-x: hidden;
+    }
+
+    .slick-dots-bottom {
+      bottom: -10px !important;
+    }
+  }
+}
+
+.testimonial-card {
+  padding: 60px;
+  background-color: $white;
+  border-radius: 30px;
+  margin-inline: 20px;
+  position: relative;
+
+  .testimonial-user {
+    height: 160px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    top: -80px;
+    width: 160px;
+    border-radius: 50%;
+    border: 4px solid $white;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .left-quote {
+    position: absolute;
+    left: 40px;
+    top: -40px;
+  }
+
+  .right-quote {
+    position: absolute;
+    right: 40px;
+    bottom: -40px;
+  }
+}
+
+.course-search-container {}
+
+.courseList-nav {
+  &::before {
+    content: unset !important;
+  }
+
+  .courseList-ink-bar {
+    display: none !important;
+  }
+
+  .courseList-nav-wrap {
+    justify-content: center;
+    margin-bottom: 40px;
+
+    .courseList-nav-list {
+      gap: 10px !important;
+    }
+  }
+
+  .courseList-tab {
+    margin: 0 !important;
+    padding-block: 12px !important;
+    padding-inline: 24px !important;
+    border: 1px solid $border-color !important;
+    min-width: 140px;
+    justify-content: center;
+  }
+
+  .courseList-tab-active {
+    // background-color: $primary !important;
+    border: 1px solid $primary !important;
+
+    // .courseList-tab-btn {
+    //   color: $white !important;
+    // }
+  }
+}
+
+.course-image-2 {
+  min-width: 250px;
+  width: 250px;
+  border-radius: 8px !important;
+
+  img {
+    border-radius: 8px !important;
+  }
+}
+
+.course-filter {
+  li {
+    padding-block: 6px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-block: 2px;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:first-child {
+      border-bottom: 2px solid $primary;
+      margin-bottom: 12px;
+      color: $primary;
+    }
+  }
+}
+
+.get-course {
+  border: 1px solid $primary;
+  border-bottom: 4px solid $primary;
+}
+
+.course-detail-image {
+  border-radius: 6px;
+  height: 450px;
+
+  img {
+    border-radius: 6px;
+    box-shadow: 16px 16px 0px $primary;
+  }
+}
+
+.course-info-card {
+  background-color: $white;
+  padding: 30px;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.course-title {
+  background-color: #f1f1f1;
+  padding: 20px 30px;
+  border-radius: 6px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.course-brief-container {
+  display: flex;
+  gap: 20px;
+  ul {
+    width: 300px;
+    min-width: 300px;
+    li button{
+      white-space: normal;
+      word-wrap: break-word;
+      &:hover{
+        color: $primary !important;
+      }
+      &.active{
+        color: $primary !important;
+      }
+    }
+  }
+  .brief-card{
+    width: 100%;
+    .brief-image{
+      height: 200px;
+      border-radius: 8px;
+      img{
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.instructure-image{
+  height: 450px;
+  min-height: 450px;
+  box-shadow: -16px -16px 0px $primary;
+  border-radius: 4px;
+  img{
+    border-radius: 4px;
+  }
+}
+
+.instructor-stats{
+  h4{
+    font-size: 50px;
+    font-weight: 700;
+  }
+}
+
+.more-instructor{
+  border: 1px solid $border-color;
+  padding: 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+  .image{
+    height: 260px;
+    min-height: 260px;
+    border-radius: 6px;
+    img{
+      border-radius: 6px;
+    }
+  }
+  &:hover{
+    box-shadow: 12px 12px 0 $light-black;
+  }
+}
