@@ -57,8 +57,8 @@ nostrud exercitation ullamco laboris.”</p> */}
                                 <ul className="list-unstyled mb-5 p-0">
                                     {/* <li className='text-uppercase'>Copper & crumb</li> */}
                                     {/* <li>GST NO. 062400171112TRN</li> */}
-                                    <li>+91 9915708181</li>
-                                    <li>Sco 6 sector 16, PANCHKULA 134109</li>
+                                    <li>+91 7701825246</li>
+                                    <li>BLW PAHARI VAIDAYI NAGER COLLONY 42, Varanasi, India, 221004</li>
                                     <li>info@nurospark.com</li>
                                 </ul>
                             </div>
@@ -67,10 +67,13 @@ nostrud exercitation ullamco laboris.”</p> */}
                             <div className="about-content">
                                 <h4 className='mb-3'>POLICIES</h4>
                                 <ul className="list-unstyled m-0 p-0 gap-4">
-                                    <li> <div className="line"></div> <Link href={'/pages/privacy-policy'}>Privacy policy</Link></li>
+                                    <li> <div className="line"></div> <Link href={'#'}>Privacy policy</Link></li>
+                                    {/* <li> <div className="line"></div> <Link href={'/pages/privacy-policy'}>Privacy policy</Link></li> */}
                                     {/* <li><div className="line"></div><Link href={'/pages/return-policy'}>Return policy</Link></li> */}
-                                    <li><div className="line"></div><Link href={'/pages/terms-and-conditions'}>Terms & Conditions</Link></li>
-                                    <li><div className="line"></div><Link href={'/pages/contact-us'}>Contact Us</Link></li>
+                                    <li><div className="line"></div><Link href={'#'}>Terms & Conditions</Link></li>
+                                    {/* <li><div className="line"></div><Link href={'/pages/terms-and-conditions'}>Terms & Conditions</Link></li> */}
+                                    <li><div className="line"></div><Link href={'#'}>Contact Us</Link></li>
+                                    {/* <li><div className="line"></div><Link href={'/pages/contact-us'}>Contact Us</Link></li> */}
                                 </ul>
                             </div>
                         </Col>
