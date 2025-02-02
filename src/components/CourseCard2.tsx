@@ -33,6 +33,7 @@ const CoursesCard2 = (res: any) => {
                 </Flex>
             </div>
             {/* <Link href={'#'}>Read More</Link> */}
+            
         </div>
     )
 }
